@@ -20,8 +20,8 @@ def callback():
     json_line = request.get_json()
     json_line = json.dumps(json_line)
     decoded = json.loads(json_line)
-    user = decoded["events"][0]['replyToken']
-    userText = decoded["events"][0]['message']['text']
+    user = decoded['originaDetectlntentRequest']['payload']['replyToken']
+    userText = decoded['queryResult']['intent']['displayname']
 #sendText(user,userText)
 if (userText == 'Hey') :
         sendText(user'มีไรยัยเพี้ยน')
